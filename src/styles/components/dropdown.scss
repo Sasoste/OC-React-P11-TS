@@ -1,0 +1,74 @@
+@import '../variables';
+
+.dropdown {
+    width: 89%;
+    cursor: pointer;
+    margin-top: 1rem;
+    z-index: 1;
+    font-family: $main-font;
+
+    border-radius: 10px 10px 5px 5px;
+
+    .title {
+        background-color: $orange;
+        padding: 10px;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        border-radius: 5px;
+
+        .fa-chevron-up,
+        .fa-chevron-down {
+            width: 16px;
+            height: 9px;
+            z-index: 2;
+            color: white;
+        }
+    }
+
+    .content {
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        border-radius: 0 0 5px 5px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        background-color: $lightgrey;
+
+        .contentStyle {
+            padding: 10px;
+        }
+    }
+
+    .hidden {
+        max-height: 0;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .dropdown {
+        width: 82%;
+        margin-top: 2rem;
+
+        .title {
+            font-size: 24px;
+            padding: 15px;
+
+            .fa-chevron-up,
+            .fa-chevron-down {
+                width: 24px;
+                height: 14px;
+            }
+        }
+
+        .content {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+}

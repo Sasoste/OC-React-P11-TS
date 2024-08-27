@@ -1,0 +1,75 @@
+@import '../variables';
+
+.housing_info {
+    font-family: $main-font;
+    font-weight: 500;
+
+    .title {
+        font-size: 18px;
+        line-height: 25px;
+        color: $orange;
+        margin-bottom: 0.3rem;
+    }
+
+    .location {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0.3rem;
+    }
+
+    .tags {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+
+        .tag {
+            background-color: $orange;
+            color: white;
+            border-radius: 5px;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 0.1rem 1rem;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .housing_info {
+
+        .title {
+            font-size: 27px;
+        }
+
+        .location {
+            font-size: 16px;
+            margin-bottom: 1rem;
+        }
+
+        .tags {
+            .tag {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .housing_info {
+
+        .title {
+            font-size: 36px;
+            line-height: 51px;
+        }
+
+        .location {
+            font-size: 18px;
+        }
+
+        .tags {
+            .tag {
+                font-size: 14px;
+            }
+        }
+    }
+}

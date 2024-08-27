@@ -1,0 +1,36 @@
+@import '../variables';
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 89%;
+    margin-bottom: 1.5rem;
+    font-family: $main-font;
+    align-items: center;
+    margin-top: 1rem;
+
+    img {
+        width: 9rem;
+        height: 3rem;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        img {
+            width: 11rem;
+            height: 3.5rem;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    header {
+        img {
+            width: 13rem;
+            height: 4rem;
+        }
+    }
+}

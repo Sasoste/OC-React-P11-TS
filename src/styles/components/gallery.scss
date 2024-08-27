@@ -1,0 +1,27 @@
+@import '../variables';
+
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        width: 89%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: $lightgrey;
+        border-radius: 25px;
+        margin-top: 2rem;
+        padding-top: 5%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery {
+        padding-top: 4.5%;
+    }
+}

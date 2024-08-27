@@ -1,0 +1,35 @@
+@import '../variables';
+
+.dropdowns {
+    width: 89%;
+
+    .dropdown {
+        width: 100%;
+
+        .content {
+            .contentStyle {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .dropdowns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .dropdown {
+            width: 45%;
+
+            .content {
+                .contentStyle {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

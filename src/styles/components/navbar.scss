@@ -1,0 +1,48 @@
+@import '../variables';
+
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+
+        li {
+            list-style: none;
+            color: $black;
+            font-weight: 500;
+            font-size: 12px;
+            margin-left: 1rem;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        ul {
+            li {
+                font-size: 18px;
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        ul {
+            li {
+                font-size: 24px;
+                margin-left: 3rem;
+            }
+        }
+    }
+}

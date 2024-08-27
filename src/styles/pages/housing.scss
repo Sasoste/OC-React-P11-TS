@@ -1,0 +1,15 @@
+@import '../variables';
+
+.housing-main {
+    width: 89%;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .housing-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1.8rem;
+    }
+}

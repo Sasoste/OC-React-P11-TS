@@ -1,0 +1,58 @@
+@import '../variables';
+
+.error_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $orange;
+    font-family: $main-font;
+
+    .number {
+        font-size: 96px;
+        margin: 7rem 0;
+        font-weight: 700;
+    }
+
+    .error_text {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 7rem;
+        font-weight: 500;
+
+        .mobile_break {
+            display: block;
+        }
+    }
+
+    .link_home {
+        color: $black;
+        text-decoration: underline;
+        font-size: 14px;
+        margin-bottom: 7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .error_message {
+        .number {
+            font-size: 288px;
+            margin: 8.7rem 0;
+            font-weight: 700;
+        }
+
+        .error_text {
+            font-size: 36px;
+            margin-bottom: 8.7rem;
+
+            .mobile_break {
+                display: inline;
+            }
+        }
+
+        .link_home {
+            font-size: 18px;
+            margin-bottom: 8.7rem;
+        }
+    }
+}
