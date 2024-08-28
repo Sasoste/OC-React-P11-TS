@@ -9,7 +9,7 @@ import LogementProvider from './provider/LogementsProvider';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/OC-React-P11-TS">
       <LogementProvider>
         <Layout>
           <Routes>
