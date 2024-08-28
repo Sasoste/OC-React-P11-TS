@@ -1,8 +1,7 @@
 import '../styles/components/footer.scss';
 import LogoFooter from '/logofooter.png';
-import { FC } from 'react';
 
-const Footer: FC = () => {
+const Footer = () => {
     return (
         <footer>
             <img src={LogoFooter} alt="Logo Kasa Blanc" />

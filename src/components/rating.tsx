@@ -1,20 +1,18 @@
 import { useParams } from "react-router-dom";
 import "../styles/components/rating.scss";
-import Logements from "../assets/logements.json";
+import { useLogements } from '../provider/LogementsProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Error from "./error";
 
-interface Logement {
-    id: string;
-    rating: string;
-}
+const Rating = () => {
 
-const Rating: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const item = Logements.find((logement: Logement) => logement.id === id);
+    const { logements } = useLogements();
+    const { id } = useParams();
+    const item = logements.find((logement) => logement.id === id);
 
     if (!item) {
-        return <div>Logement non trouvé</div>;
+        return <Error />;
     }
 
     const rating: number = parseInt(item.rating, 10);

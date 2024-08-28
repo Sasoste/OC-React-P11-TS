@@ -1,8 +1,7 @@
 import '../styles/components/error.scss';
 import { Link } from 'react-router-dom';
-import { FC } from 'react';
 
-const Error: FC = () => {
+const Error = () => {
     return (
         <section className="error_message">
             <span className="number">404</span>

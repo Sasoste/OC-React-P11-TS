@@ -1,13 +1,13 @@
-import { FC } from 'react';
 import Rating from './rating';
 import '../styles/components/host.scss';
+import { Logement } from '../provider/LogementsProvider';
 
 interface HostInfoProps {
-    hostName: string;
-    hostPicture: string;
+    hostName: Logement['host']['name'];
+    hostPicture: Logement['host']['picture'];
 }
 
-const HostInfo: FC<HostInfoProps> = ({ hostName, hostPicture }) => {
+const HostInfo = ({ hostName, hostPicture }: HostInfoProps) => {
     const [firstName, lastName] = hostName.split(" ");
 
     return (

@@ -1,13 +1,13 @@
-import React from 'react';
 import '../styles/components/housingMainInfo.scss';
+import { Logement } from '../provider/LogementsProvider';
 
-interface Logement {
-    title: string;
-    location: string;
-    tags: string[];
+interface HousingInfoProps {
+    title: Logement['title'],
+    location: Logement['location'],
+    tags: Logement['tags']
 }
 
-const HousingInfo: React.FC<Logement> = ({ title, location, tags }) => {
+const HousingInfo = ({ title, location, tags }: HousingInfoProps) => {
     return (
         <article className="housing_info">
             <h1 className="title">{title}</h1>

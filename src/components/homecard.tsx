@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import '../styles/components/homecard.scss';
+import { Logement } from '../provider/LogementsProvider';
 
-interface Logement {
-    id: string;
-    title: string;
-    cover: string;
+interface HomecardProps {
+    logement: Logement;
 }
 
-const Homecard: React.FC<{ logement: Logement }> = ({ logement }) => {
+const Homecard = ({ logement }: HomecardProps) => {
     return (
         <Link to={`/housing/${logement.id}`} className="cardLink">
             <div className="card">

@@ -1,9 +1,8 @@
-import React from 'react';
 import Banner from '../components/banner';
 import ImageAbout from '../../public/about.png';
 import Dropdown from '../components/dropdown';
 
-const About: React.FC = () => {
+const About = () => {
     return (
         <main>
             <Banner imgSrc={ImageAbout} imgAlt='Panorama Montagne' />

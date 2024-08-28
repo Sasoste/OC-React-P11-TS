@@ -1,17 +1,13 @@
 import Homecard from './homecard';
-import Logements from "../assets/logements.json";
+import { useLogements } from '../provider/LogementsProvider';
 import "../styles/components/gallery.scss";
 
-interface Logement {
-    id: string;
-    title: string;
-    cover: string;
-}
+const Gallery = () => {
+    const { logements } = useLogements();
 
-const Gallery: React.FC = () => {
     return (
         <div className="gallery">
-            {Logements.map((logement: Logement) => (
+            {logements.map((logement) => (
                 <Homecard key={logement.id} logement={logement} />
             ))}
         </div>

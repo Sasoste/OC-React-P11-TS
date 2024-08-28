@@ -1,31 +1,18 @@
-import React from 'react';
 import { useParams } from "react-router-dom";
+import { useLogements } from '../provider/LogementsProvider';
 import HostInfo from '../components/host';
 import HousingInfo from '../components/housingMainInfo';
 import HousingSecondaryInfo from '../components/housingSecondaryInfo';
 import Carrousel from '../components/carrousel';
-import Logements from "../assets/logements.json";
 import Error from '../components/error';
 import '../styles/pages/housing.scss';
 
-interface Logement {
-    id: string;
-    title: string;
-    location: string;
-    tags: string[];
-    host: {
-        name: string;
-        picture: string;
-    };
-    pictures: string[];
-    description: string;
-    rating: string;
-    equipments: string[];
-}
 
-const Housing: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const logement = Logements.find((item: Logement) => item.id === id);
+const Housing = () => {
+    const { id } = useParams();
+    const { logements } = useLogements();
+
+    const logement = logements.find((item) => item.id === id);
 
     if (!logement) {
         return <Error />;

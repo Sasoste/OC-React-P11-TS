@@ -1,16 +1,15 @@
 import '../styles/components/banner.scss'
-import { FC } from 'react';
 import { useLocation } from 'react-router-dom';
 
-interface BannerProps {
+type BannerProps = {
     imgSrc: string;
     imgAlt: string;
 }
 
-const Banner: FC<BannerProps> = ({ imgSrc, imgAlt }) => {
+const Banner = ({ imgSrc, imgAlt }: BannerProps) => {
 
-    const location = useLocation(); // Quel typage?
-    const isHomePage: boolean = location.pathname === "/";
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
 
     return (
         <section className="banner">

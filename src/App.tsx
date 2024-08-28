@@ -5,19 +5,21 @@ import Housing from './pages/housing';
 import About from './pages/about';
 import Home from './pages/home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import React from 'react';
+import LogementProvider from './provider/LogementsProvider';
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/housing/:id" element={<Housing />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </Layout>
+      <LogementProvider>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/housing/:id" element={<Housing />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Routes>
+        </Layout>
+      </LogementProvider>
     </Router>
   );
 };

@@ -1,7 +1,6 @@
-import React from 'react';
 import Error from '../components/error';
 
-const ErrorPage: React.FC = () => {
+const ErrorPage = () => {
     return (
         <main>
             <Error />

@@ -2,9 +2,8 @@ import '../styles/components/header.scss';
 import Navbar from './navbar';
 import Logo from '/logo.png';
 import { Link } from 'react-router-dom';
-import { FC } from 'react';
 
-const Header: FC = () => {
+const Header = () => {
     return (
         <header>
             <Link to="/">

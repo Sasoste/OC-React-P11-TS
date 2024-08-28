@@ -1,19 +1,15 @@
-import { useState, FC } from 'react';
+import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Logements from '../assets/logements.json';
 import '../styles/components/carrousel.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { useLogements } from '../provider/LogementsProvider';
 
-interface Logement {
-    id: string;
-    title: string;
-    pictures: string[];
-}
+const Carrousel = () => {
+    const { id } = useParams();
+    const { logements } = useLogements();
 
-const Carrousel: FC = () => {
-    const { id } = useParams<{ id: string }>();
-    const item = Logements.find((logement: Logement) => logement.id === id);
+    const item = logements.find((logement) => logement.id === id);
 
     if (!item) {
         return <div>Logement non trouvé</div>;

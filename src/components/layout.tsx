@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Header from './header';
 import Footer from './footer';
 
@@ -7,7 +7,7 @@ interface LayoutProps {
     children: ReactNode;
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
     return (
         <>
             <Header />

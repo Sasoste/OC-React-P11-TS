@@ -10,6 +10,7 @@
     border-radius: 10px 10px 5px 5px;
 
     .title {
+        position: relative;
         background-color: $orange;
         padding: 10px;
         color: white;
@@ -18,7 +19,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: 1;
+        z-index: 2;
         border-radius: 5px;
 
         .fa-chevron-up,
@@ -38,6 +39,9 @@
         font-weight: 400;
         line-height: 17px;
         background-color: $lightgrey;
+        margin-top: -10px;
+        padding-top: 10px;
+        z-index: 1;
 
         .contentStyle {
             padding: 10px;

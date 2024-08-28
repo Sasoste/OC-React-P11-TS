@@ -1,5 +1,5 @@
 import '../styles/components/dropdown.scss';
-import { useState, FC } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,8 +9,8 @@ interface DropdownProps {
     content: string | string[];
 }
 
-const Dropdown: FC<DropdownProps> = ({ title, content }) => {
-    const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+const Dropdown = ({ title, content }: DropdownProps) => {
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
     function toggleCollapse() {
         setIsCollapsed(!isCollapsed);

@@ -1,13 +1,13 @@
-import React from 'react';
 import '../styles/components/housingSecondaryInfo.scss';
 import Dropdown from './dropdown';
+import { Logement } from '../provider/LogementsProvider';
 
 interface HousingSecondaryInfoProps {
-    description: string;
-    equipments: string[];
+    description: Logement['description'];
+    equipments: Logement['equipments'];
 }
 
-const HousingSecondaryInfo: React.FC<HousingSecondaryInfoProps> = ({ description, equipments }) => {
+const HousingSecondaryInfo = ({ description, equipments }: HousingSecondaryInfoProps) => {
     return (
         <section className="dropdowns">
             <Dropdown title="Description" content={description} />
