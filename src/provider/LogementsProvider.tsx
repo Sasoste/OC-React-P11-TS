@@ -35,7 +35,7 @@ const LogementProvider = ({ children }: LogementProviderProps) => {
     const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
-        fetch('/logements.json')
+        fetch('/OC-React-P11-TS/logements.json')
             .then((data) => {
                 if (!data.ok) {
                     throw new Error('Erreur lors du chargement des données');
